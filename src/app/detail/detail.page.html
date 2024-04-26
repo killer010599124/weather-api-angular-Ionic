@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">detail</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <strong>Address : {{ responseData.address }}</strong>
+
+      <ion-list>
+        <div class="day-container" *ngFor="let day of responseData.days">
+          <p class="date">Date: {{ day.datetime | date:'mediumDate' }}</p>
+          <p>Temperature: {{ day.temp }}</p>
+          <p>Humidity: {{ day.humidity }}</p>
+          <p>Precipitation: {{ day.precip }}</p>
+          <p>Feels Like Temperature: {{ day.feelslike }}</p>
+          <p>Dew Point: {{ day.dew }}</p>
+          <p>Wind Gust: {{ day.windgust }}</p>
+          <p>Wind Speed: {{ day.windspeed }}</p>
+          <p>Wind Direction: {{ day.winddir }}</p>
+          <p>Pressure: {{ day.pressure }}</p>
+          <p>Cloud Cover: {{ day.cloudcover }}</p>
+          <p>Visibility: {{ day.visibility }}</p>
+          <p>Solar Radiation: {{ day.solarRadiation }}</p>
+          <p>Solar Energy: {{ day.solarenergy }}</p>
+          <p>UV Index: {{ day.uvindex }}</p>
+          <p>Severe Risk: {{ day.severerisk }}</p>
+          <p>Conditions: {{ day.conditions }}</p>
+        </div>
+      </ion-list>
+
+
+  </div>
+</ion-content>
